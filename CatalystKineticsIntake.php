@@ -61,9 +61,9 @@ function print_page_01() {
 
     if(isset($_REQUEST['sex'])) {
       if($_REQUEST['sex'] == 'male')
-          $pdf->Image('templates/imgs/check.png', 153,87,2,2);   //Male
+          $pdf->Image('imgs/check.png', 153,87,2,2);   //Male
       if($_REQUEST['sex'] == 'female')
-          $pdf->Image('templates/imgs/check.png', 171.6,87.1,2,2);    //Female
+          $pdf->Image('imgs/check.png', 171.6,87.1,2,2);    //Female
     }
 
 
@@ -89,28 +89,28 @@ function print_page_01() {
     $pdf->Write(0, !isset($_REQUEST['email']) ? '' : $_REQUEST['email']);
 
     if(isset($_REQUEST['pleasespecify1']) && $_REQUEST['pleasespecify1'] == 'catalyst')
-        $pdf->Image('templates/imgs/check.png', 13.3,141.6,2,2);
+        $pdf->Image('imgs/check.png', 13.3,141.6,2,2);
 
     $pdf->SetXY(91, 142);
     $pdf->Write(0, !isset($_REQUEST['catalystkinetics']) ? '' : $_REQUEST['catalystkinetics']);
 
     if(isset($_REQUEST['pleasespecify2']) && $_REQUEST['pleasespecify2'] == 'practitioner')
-        $pdf->Image('templates/imgs/check.png', 13.3,148,2,2);
+        $pdf->Image('imgs/check.png', 13.3,148,2,2);
     $pdf->SetXY(102.5, 148);
     $pdf->Write(0, !isset($_REQUEST['practitionerdoctor']) ? '' : $_REQUEST['practitionerdoctor']);
 
     if(isset($_REQUEST['pleasespecify3']) && $_REQUEST['pleasespecify3'] == 'patient')
-        $pdf->Image('templates/imgs/check.png', 13.3,154.2,2,2);
+        $pdf->Image('imgs/check.png', 13.3,154.2,2,2);
     $pdf->SetXY(92.5, 154.2);
     $pdf->Write(0, !isset($_REQUEST['patientclient']) ? '' : $_REQUEST['patientclient']);
 
     if(isset($_REQUEST['pleasespecify4']) && $_REQUEST['pleasespecify4'] == 'searchengine')
-        $pdf->Image('templates/imgs/check.png', 13.3,160.2,2,2);
+        $pdf->Image('imgs/check.png', 13.3,160.2,2,2);
     $pdf->SetXY(123.5, 160.4);
     $pdf->Write(0, !isset($_REQUEST['searchenginesocialmedia']) ? '' : $_REQUEST['searchenginesocialmedia']);
 
     if(isset($_REQUEST['pleasespecify5']) && $_REQUEST['pleasespecify5'] == 'other')
-        $pdf->Image('templates/imgs/check.png', 13.3,166.6,2,2);
+        $pdf->Image('imgs/check.png', 13.3,166.6,2,2);
     $pdf->SetXY(60.7, 166.6);
     $pdf->Write(0, !isset($_REQUEST['otherspecify']) ? '' : $_REQUEST['otherspecify']);
 
@@ -129,26 +129,26 @@ function print_page_01() {
     $pdf->SetXY(26, 195.2);
     $pdf->Write(0, !isset($_REQUEST['mspinput']) ? '' : $_REQUEST['mspinput']);
     if(isset($_REQUEST['medicalcoverage']) && $_REQUEST['medicalcoverage'] == 'yes')
-        $pdf->Image('templates/imgs/check.png', 163.7,194.4,2,2);
+        $pdf->Image('imgs/check.png', 163.7,194.4,2,2);
     if(isset($_REQUEST['medicalcoverage']) && $_REQUEST['medicalcoverage'] == 'no')
-        $pdf->Image('templates/imgs/check.png', 176.5,194.4,2,2);
+        $pdf->Image('imgs/check.png', 176.5,194.4,2,2);
 
     if(isset($_REQUEST['icbcwcbclaim']) && $_REQUEST['icbcwcbclaim'] == 'yes')
-        $pdf->Image('templates/imgs/check.png', 109.5,204,2,2);
+        $pdf->Image('imgs/check.png', 109.5,204,2,2);
     if(isset($_REQUEST['icbcwcbclaim']) && $_REQUEST['icbcwcbclaim'] == 'no')
-        $pdf->Image('templates/imgs/check.png', 122.4,204,2,2);
+        $pdf->Image('imgs/check.png', 122.4,204,2,2);
     $pdf->SetXY(147.4, 205.3);
     $pdf->Write(0, !isset($_REQUEST['claiminput']) ? '' : $_REQUEST['claiminput']);
 
     if(isset($_REQUEST['mvaworkplace']) && $_REQUEST['mvaworkplace'] == 'yes')
-        $pdf->Image('templates/imgs/check.png', 132.2,213.8,2,2);
+        $pdf->Image('imgs/check.png', 132.2,213.8,2,2);
     if(isset($_REQUEST['mvaworkplace']) && $_REQUEST['mvaworkplace'] == 'no')
-        $pdf->Image('templates/imgs/check.png', 144.9,213.8,2,2);
+        $pdf->Image('imgs/check.png', 144.9,213.8,2,2);
 
     if(isset($_REQUEST['currentlystudent']) && $_REQUEST['currentlystudent'] == 'yes')
-        $pdf->Image('templates/imgs/check.png', 87.1,225.1,2,2);
+        $pdf->Image('imgs/check.png', 87.1,225.1,2,2);
     if(isset($_REQUEST['currentlystudent']) && $_REQUEST['currentlystudent'] == 'no')
-        $pdf->Image('templates/imgs/check.png', 99.8,225.1,2,2);
+        $pdf->Image('imgs/check.png', 99.8,225.1,2,2);
     $pdf->SetXY(143.6, 226);
     $pdf->Write(0, !isset($_REQUEST['schoolgrade']) ? '' : $_REQUEST['schoolgrade']);
 
@@ -171,7 +171,7 @@ function print_page_02() {
     $pdf->SetTextColor(0, 0, 0);
 
     if(isset($_REQUEST['checkpage2value']) && $_REQUEST['checkpage2value'] == 'yes')
-        $pdf->Image('templates/imgs/check.png', 35,241,4,4);
+        $pdf->Image('imgs/check.png', 35,241,4,4);
 }
 function print_page_03() {
     global $pdf;
@@ -182,9 +182,9 @@ function print_page_03() {
     $pdf->Write(0, !isset($_REQUEST['customersname']) ? '' : $_REQUEST['customersname']);
 
     if(isset($_REQUEST['credit_card_check']) && $_REQUEST['credit_card_check'] == 'visa')
-        $pdf->Image('templates/imgs/check.png', 98,85,4,4);
+        $pdf->Image('imgs/check.png', 98,85,4,4);
     if(isset($_REQUEST['credit_card_check']) && $_REQUEST['credit_card_check'] == 'master')
-        $pdf->Image('templates/imgs/check.png', 155.5,85,4,4);
+        $pdf->Image('imgs/check.png', 155.5,85,4,4);
 
     $pdf->SetXY(54.7,97.6);
     $pdf->Write(0, !isset($_REQUEST['credit_number1']) ? '' : $_REQUEST['credit_number1']);
@@ -265,41 +265,41 @@ function print_page_04() {
     global $pdf;
 
     if(isset($_REQUEST['mycheck1']) && $_REQUEST['mycheck1'] == 'mycheckvalue1')
-    $pdf->Image('templates/imgs/check.png', 60.8,83,3,3);
+    $pdf->Image('imgs/check.png', 60.8,83,3,3);
     if(isset($_REQUEST['mycheck2']) && $_REQUEST['mycheck2'] == 'mycheckvalue2')
-    $pdf->Image('templates/imgs/check.png', 85,83,3,3);
+    $pdf->Image('imgs/check.png', 85,83,3,3);
     if(isset($_REQUEST['mycheck3']) && $_REQUEST['mycheck3'] == 'mycheckvalue3')
-    $pdf->Image('templates/imgs/check.png', 111.8,83,3,3);
+    $pdf->Image('imgs/check.png', 111.8,83,3,3);
     if(isset($_REQUEST['mycheck4']) && $_REQUEST['mycheck4'] == 'mycheckvalue4')
-    $pdf->Image('templates/imgs/check.png', 139.7,83,3,3);
+    $pdf->Image('imgs/check.png', 139.7,83,3,3);
     if(isset($_REQUEST['mycheck5']) && $_REQUEST['mycheck5'] == 'mycheckvalue5')
-    $pdf->Image('templates/imgs/check.png', 167.6,83,3,3);
+    $pdf->Image('imgs/check.png', 167.6,83,3,3);
     if(isset($_REQUEST['mycheck6']) && $_REQUEST['mycheck6'] == 'mycheckvalue6')
-    $pdf->Image('templates/imgs/check.png', 195.6,83,3,3);
+    $pdf->Image('imgs/check.png', 195.6,83,3,3);
 
     if(isset($_REQUEST['mycheck7']) && $_REQUEST['mycheck7'] == 'mycheckvalue7')
-    $pdf->Image('templates/imgs/check.png', 60.8,91.5,3,3);
+    $pdf->Image('imgs/check.png', 60.8,91.5,3,3);
     if(isset($_REQUEST['mycheck8']) && $_REQUEST['mycheck8'] == 'mycheckvalue8')
-    $pdf->Image('templates/imgs/check.png', 85,91.5,3,3);
+    $pdf->Image('imgs/check.png', 85,91.5,3,3);
     if(isset($_REQUEST['mycheck9']) && $_REQUEST['mycheck9'] == 'mycheckvalue9')
-    $pdf->Image('templates/imgs/check.png', 111.8,91.5,3,3);
+    $pdf->Image('imgs/check.png', 111.8,91.5,3,3);
     if(isset($_REQUEST['mycheck10']) && $_REQUEST['mycheck10'] == 'mycheckvalue10')
-    $pdf->Image('templates/imgs/check.png', 139.7,91.5,3,3);
+    $pdf->Image('imgs/check.png', 139.7,91.5,3,3);
     if(isset($_REQUEST['mycheck11']) && $_REQUEST['mycheck11'] == 'mycheckvalue11')
-    $pdf->Image('templates/imgs/check.png', 167.6,91.5,3,3);
+    $pdf->Image('imgs/check.png', 167.6,91.5,3,3);
     if(isset($_REQUEST['mycheck12']) && $_REQUEST['mycheck12'] == 'mycheckvalue12')
-    $pdf->Image('templates/imgs/check.png', 195.6,91.5,3,3);
+    $pdf->Image('imgs/check.png', 195.6,91.5,3,3);
 
     if(isset($_REQUEST['mycheck13']) && $_REQUEST['mycheck13'] == 'mycheckvalue13')
-    $pdf->Image('templates/imgs/check.png', 60.8,100.3,3,3);
+    $pdf->Image('imgs/check.png', 60.8,100.3,3,3);
     if(isset($_REQUEST['mycheck14']) && $_REQUEST['mycheck14'] == 'mycheckvalue14')
-    $pdf->Image('templates/imgs/check.png', 85,100.3,3,3);
+    $pdf->Image('imgs/check.png', 85,100.3,3,3);
     if(isset($_REQUEST['mycheck15']) && $_REQUEST['mycheck15'] == 'mycheckvalue15')
-    $pdf->Image('templates/imgs/check.png', 111.8,100.3,3,3);
+    $pdf->Image('imgs/check.png', 111.8,100.3,3,3);
     if(isset($_REQUEST['mycheck16']) && $_REQUEST['mycheck16'] == 'mycheckvalue16')
-    $pdf->Image('templates/imgs/check.png', 139.7,100.3,3,3);
+    $pdf->Image('imgs/check.png', 139.7,100.3,3,3);
     if(isset($_REQUEST['mycheck17']) && $_REQUEST['mycheck17'] == 'mycheckvalue17')
-    $pdf->Image('templates/imgs/check.png', 167.6,100.3,3,3);
+    $pdf->Image('imgs/check.png', 167.6,100.3,3,3);
     if(isset($_REQUEST['mycheck18']) && $_REQUEST['mycheck18'] == 'mycheckvalue18')
     $pdf->Image('templates/imgs/check.png', 195.6,100.3,3,3);
 }
